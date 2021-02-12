@@ -279,6 +279,9 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.secure_element@1.0.vendor
 
+PRODUCT_PACKAGES += \
+    libavservices_minijail.vendor
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
