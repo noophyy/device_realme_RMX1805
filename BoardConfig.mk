@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/realme/RMX1805
 
+# Assertions
+TARGET_OTA_ASSERT_DEVICE := RMX1805,RMX1809,RMX1811
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
