@@ -1629,6 +1629,7 @@ vendor/etc/ST_Liveness.model
 vendor/etc/ST_Ocular.model.hardcode
 vendor/etc/ST_Verify.model.hardcode
 vendor/lib/android.frameworks.faceservice@1.0.so
+vendor/lib/libopposfr.so
 vendor/lib/libStDualCam.so
 vendor/lib/libstfaceunlock.so
 vendor/lib/libstfaceunlockocl.so
