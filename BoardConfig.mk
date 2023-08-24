@@ -143,12 +143,15 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
-TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # SELinux
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+
+# System-as-root
+BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Treble
 PRODUCT_FULL_TREBLE_OVERRIDE := true
