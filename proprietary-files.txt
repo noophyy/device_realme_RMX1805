@@ -1149,6 +1149,81 @@ vendor/lib/mediadrm/libwvdrmengine.so|3ae53fc751f1ddfc6b54f235cef364476fe85f7e
 vendor/lib64/mediadrm/libwvdrmengine.so|9606c921acd992c32d9211d0c6ba92850773980e
 vendor/lib64/libwvhidl.so|049d9e9a82f66b6699611035a6f69f9d7af7c62d
 
+# Firmware
+etc/firmware/ice40.bin
+etc/firmware/wlan/prima/WCNSS_cfg.dat
+vendor/firmware/a225p5_pm4.fw
+vendor/firmware/a225_pfp.fw
+vendor/firmware/a225_pm4.fw
+vendor/firmware/a300_pfp.fw
+vendor/firmware/a300_pm4.fw
+vendor/firmware/a330_pfp.fw
+vendor/firmware/a330_pm4.fw
+vendor/firmware/a420_pfp.fw
+vendor/firmware/a420_pm4.fw
+vendor/firmware/a506_zap.elf
+vendor/firmware/a530v1_pfp.fw
+vendor/firmware/a530v1_pm4.fw
+vendor/firmware/a530v2_seq.fw2
+vendor/firmware/a530v3_gpmu.fw2
+vendor/firmware/a530v3_seq.fw2
+vendor/firmware/a530_gpmu.fw2
+vendor/firmware/a540_gpmu.fw2
+vendor/firmware/alipay.b00
+vendor/firmware/alipay.b01
+vendor/firmware/alipay.b02
+vendor/firmware/alipay.b03
+vendor/firmware/alipay.b04
+vendor/firmware/alipay.b05
+vendor/firmware/alipay.b06
+vendor/firmware/alipay.mdt
+vendor/firmware/cryptoeng.b00
+vendor/firmware/cryptoeng.b01
+vendor/firmware/cryptoeng.b02
+vendor/firmware/cryptoeng.b03
+vendor/firmware/cryptoeng.b04
+vendor/firmware/cryptoeng.b05
+vendor/firmware/cryptoeng.b06
+vendor/firmware/cryptoeng.mdt
+vendor/firmware/emmc/HYNIX-hB8aP>.bin_crc.bin
+vendor/firmware/emmc/move_target_emmc_fw_to_reserve4.sh
+vendor/firmware/emmc/SAMSUNG-GD6BMB.bin_crc.bin
+vendor/firmware/emmc/SAMSUNG-QD63MB.bin_crc.bin
+vendor/firmware/emmc/SAMSUNG-QE63MB.bin_crc.bin
+vendor/firmware/facereg.b00
+vendor/firmware/facereg.b01
+vendor/firmware/facereg.b02
+vendor/firmware/facereg.b03
+vendor/firmware/facereg.b04
+vendor/firmware/facereg.b05
+vendor/firmware/facereg.b06
+vendor/firmware/facereg.mdt
+vendor/firmware/fpctzapp.b00
+vendor/firmware/fpctzapp.b01
+vendor/firmware/fpctzapp.b02
+vendor/firmware/fpctzapp.b03
+vendor/firmware/fpctzapp.b04
+vendor/firmware/fpctzapp.b05
+vendor/firmware/fpctzapp.b06
+vendor/firmware/fpctzapp.mdt
+vendor/firmware/himax_firmware_hlt_05.bin
+vendor/firmware/himax_firmware_sort_tcl.bin
+vendor/firmware/himax_firmware_tcl.bin
+vendor/firmware/hx_criteria.csv
+vendor/firmware/hx_criteria_tcl.csv
+vendor/firmware/ILITEK_FW.bin
+vendor/firmware/leia_pfp_470.fw
+vendor/firmware/leia_pm4_470.fw
+vendor/firmware/mp.ini
+vendor/firmware/novatek_tm_ts_fw.bin
+vendor/firmware/novatek_tm_ts_mp.bin
+vendor/firmware/novatek_xl_mp.bin
+vendor/firmware/novatek_xl_ts_fw.bin
+vendor/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+vendor/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+
 # Gatekeeper - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|bea6d682011b465a08b9085f7b5e69b965743eee
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
@@ -1254,13 +1329,13 @@ vendor/lib64/libmm-hdcpmgr.so|73d428151e99086ac3e48db95a660e7d7807a8e3
 vendor/lib64/librs_adreno.so|1b894b53ef85039b6119f2d48820978192e3aeed
 vendor/lib64/librs_adreno_sha1.so|f9d28682f9c219dfe086da9f3a15aaddbcd38a05
 
-# Graphics (Firmware) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
-vendor/firmware/a506_zap.b00|c45a7b34456844f5deb73e2dce79cbfcfb9ae71c
-vendor/firmware/a506_zap.b01|374b5c4a2212b2636d5dfc2deda66b56b6bf2d03
-vendor/firmware/a506_zap.b02|b79957c47f0a6757ac1d721dbe06551508454634
-vendor/firmware/a506_zap.mdt|621df918f1d6ef0a0c3fe25c8f6a58d56af4b26a
-vendor/firmware/a530_pfp.fw|c19e1905c15622d7bb02409e6748959bceda9b08
-vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
+# Graphics (Firmware)
+vendor/firmware/a506_zap.b00
+vendor/firmware/a506_zap.b01
+vendor/firmware/a506_zap.b02
+vendor/firmware/a506_zap.mdt
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
 
 # Graphics (SDM) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/lib/libscalar.so|7ac579768ffd2caee903d69d8fd3f7918b04ffbe
