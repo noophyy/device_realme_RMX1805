@@ -1149,6 +1149,81 @@ vendor/lib/mediadrm/libwvdrmengine.so|3ae53fc751f1ddfc6b54f235cef364476fe85f7e
 vendor/lib64/mediadrm/libwvdrmengine.so|9606c921acd992c32d9211d0c6ba92850773980e
 vendor/lib64/libwvhidl.so|049d9e9a82f66b6699611035a6f69f9d7af7c62d
 
+# Firmware
+etc/firmware/ice40.bin
+etc/firmware/wlan/prima/WCNSS_cfg.dat
+vendor/firmware/a225p5_pm4.fw
+vendor/firmware/a225_pfp.fw
+vendor/firmware/a225_pm4.fw
+vendor/firmware/a300_pfp.fw
+vendor/firmware/a300_pm4.fw
+vendor/firmware/a330_pfp.fw
+vendor/firmware/a330_pm4.fw
+vendor/firmware/a420_pfp.fw
+vendor/firmware/a420_pm4.fw
+vendor/firmware/a506_zap.elf
+vendor/firmware/a530v1_pfp.fw
+vendor/firmware/a530v1_pm4.fw
+vendor/firmware/a530v2_seq.fw2
+vendor/firmware/a530v3_gpmu.fw2
+vendor/firmware/a530v3_seq.fw2
+vendor/firmware/a530_gpmu.fw2
+vendor/firmware/a540_gpmu.fw2
+vendor/firmware/alipay.b00
+vendor/firmware/alipay.b01
+vendor/firmware/alipay.b02
+vendor/firmware/alipay.b03
+vendor/firmware/alipay.b04
+vendor/firmware/alipay.b05
+vendor/firmware/alipay.b06
+vendor/firmware/alipay.mdt
+vendor/firmware/cryptoeng.b00
+vendor/firmware/cryptoeng.b01
+vendor/firmware/cryptoeng.b02
+vendor/firmware/cryptoeng.b03
+vendor/firmware/cryptoeng.b04
+vendor/firmware/cryptoeng.b05
+vendor/firmware/cryptoeng.b06
+vendor/firmware/cryptoeng.mdt
+vendor/firmware/emmc/HYNIX-hB8aP>.bin_crc.bin
+vendor/firmware/emmc/move_target_emmc_fw_to_reserve4.sh
+vendor/firmware/emmc/SAMSUNG-GD6BMB.bin_crc.bin
+vendor/firmware/emmc/SAMSUNG-QD63MB.bin_crc.bin
+vendor/firmware/emmc/SAMSUNG-QE63MB.bin_crc.bin
+vendor/firmware/facereg.b00
+vendor/firmware/facereg.b01
+vendor/firmware/facereg.b02
+vendor/firmware/facereg.b03
+vendor/firmware/facereg.b04
+vendor/firmware/facereg.b05
+vendor/firmware/facereg.b06
+vendor/firmware/facereg.mdt
+vendor/firmware/fpctzapp.b00
+vendor/firmware/fpctzapp.b01
+vendor/firmware/fpctzapp.b02
+vendor/firmware/fpctzapp.b03
+vendor/firmware/fpctzapp.b04
+vendor/firmware/fpctzapp.b05
+vendor/firmware/fpctzapp.b06
+vendor/firmware/fpctzapp.mdt
+vendor/firmware/himax_firmware_hlt_05.bin
+vendor/firmware/himax_firmware_sort_tcl.bin
+vendor/firmware/himax_firmware_tcl.bin
+vendor/firmware/hx_criteria.csv
+vendor/firmware/hx_criteria_tcl.csv
+vendor/firmware/ILITEK_FW.bin
+vendor/firmware/leia_pfp_470.fw
+vendor/firmware/leia_pm4_470.fw
+vendor/firmware/mp.ini
+vendor/firmware/novatek_tm_ts_fw.bin
+vendor/firmware/novatek_tm_ts_mp.bin
+vendor/firmware/novatek_xl_mp.bin
+vendor/firmware/novatek_xl_ts_fw.bin
+vendor/firmware/wlan/prima/WCNSS_qcom_cfg.ini
+vendor/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
+vendor/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
+vendor/firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini
+
 # Gatekeeper - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti|bea6d682011b465a08b9085f7b5e69b965743eee
 vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc|1b8d5f58fe0a57906acf72b862c16a2521daa97b
@@ -1260,9 +1335,13 @@ vendor/lib64/libsdm-diag.so|4ec7f55fd8a4a1a316282be57e1d5c1a3a20660d
 vendor/lib64/libsdmextension.so|c24b4bafef47d2738b946ab3c3e46865b0d0fe2c
 vendor/lib64/libtinyxml2_1.so|5eaa71107c3ac981774b523a761246aa18a6a5cf
 
-# Graphics (Firmware) - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
-vendor/firmware/a530_pfp.fw|c19e1905c15622d7bb02409e6748959bceda9b08
-vendor/firmware/a530_pm4.fw|b1cf625b5552b99839687f479c124ac5daca2ca2
+# Graphics (Firmware)
+vendor/firmware/a506_zap.b00
+vendor/firmware/a506_zap.b01
+vendor/firmware/a506_zap.b02
+vendor/firmware/a506_zap.mdt
+vendor/firmware/a530_pfp.fw
+vendor/firmware/a530_pm4.fw
 
 # Ipacm - from daisy-user 10 QKQ1.191002.002 V11.0.21.0.QDLMIXM release-keys
 vendor/bin/ipacm-diag|f08be0dfb0cedecfdf8fae261a3b06f416b56dc2
