@@ -25,6 +25,7 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+import /vendor/etc/init/hw/init.oppo.rc
 import /vendor/etc/init/hw/init.qcom.usb.rc
 import /vendor/etc/init/hw/init.msm.usb.configfs.rc
 import /vendor/etc/init/hw/init.target.rc
@@ -255,6 +256,10 @@ on post-fs-data
     mkdir /data/vendor/wifi/hostapd/ctrl 0770 wifi wifi
     mkdir /data/vendor/wifi/wpa_supplicant 0770 wifi wifi
 
+    #modify the policy fotr touch
+    chmod 0666 /proc/touchpanel/double_tap_enable
+    chmod 0666 /proc/touchpanel/black_screen_test
+
     #create netmgr log dir
     mkdir /data/vendor/netmgr 0770 radio radio
     chmod 0770 /data/vendor/netmgr
@@ -283,6 +288,9 @@ on post-fs-data
 
     # Create directory for modem_config
     mkdir /data/vendor/modem_config 0570 radio root
+
+    # add for wlan multi-bin solution
+    chmod 0666 /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
 
     # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
     # We chown/chmod /persist again so because mount is run as root + defaults
@@ -331,6 +339,13 @@ on post-fs-data
 
     #Create a folder for SRS to be able to create a usercfg file
     #mkdir /data/data/media 0770 media media
+
+    # allow system app to access /mnt/vendor/persist/camera
+    # allow system app to access /persist/camera
+    mkdir /mnt/vendor/persist/camera 0770 system camera
+    chmod 0666 /mnt/vendor/persist/camera/calib_result
+    chmod 0664 /mnt/vendor/persist/camera/leafLicense.lic
+    chmod 0777 /mnt/vendor/persist/camera/dualcam_cali.bin
 
     #Create FM dir for patchdownloader
     mkdir /data/vendor/fm 0770 system system
@@ -423,6 +438,8 @@ on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
     restart vendor.audio-hal
     start wcnss-service
+# Add to aceess data fw files
+    start bspFwUpdate
 
 on property:persist.env.fastdorm.enabled=true
     setprop persist.radio.data_no_toggle 1
@@ -570,12 +587,23 @@ on property:init.svc.surfaceflinger=restarting
     start vendor.hwcomposer-2-1
     start vendor.hwcomposer-2-2
 
+on property:vendor.display.lcd_density=*
+    setprop ro.sf.lcd_density ${vendor.display.lcd_density}
+
+#Set GPU Opengles version
+on property:vendor.opengles.version=*
+    setprop ro.opengles.version ${vendor.opengles.version}
+
+#Set gpu available frequencies property
+on property:vendor.gpu.available_frequencies=*
+    setprop ro.vendor.gpu.available_frequencies ${vendor.gpu.available_frequencies}
+
 service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     override
     class hal
     user audioserver
     # media gid needed for /dev/fm (radio) and for /data/misc/media (tee)
-    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
+    group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock readproc
     capabilities BLOCK_SUSPEND SYS_NICE
     ioprio rt 4
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks

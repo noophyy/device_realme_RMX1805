@@ -267,7 +267,7 @@ case "$target" in
                   ;;
         esac
         ;;
-    "msm8994" | "msm8992" | "msm8998" | "apq8098_latv" | "sdm845" | "sdm710" | "qcs605" | "talos")
+    "msm8994" | "msm8992" | "msm8998" | "apq8098_latv" | "sdm845" | "sdm710" | "qcs605" | "sm6150" | "trinket")
         start_msm_irqbalance
         ;;
     "msm8996")
@@ -333,6 +333,35 @@ case "$target" in
         ;;
     "msm8953")
 	start_msm_irqbalance_8939
+        if [ -f /sys/devices/soc0/soc_id ]; then
+            soc_id=`cat /sys/devices/soc0/soc_id`
+        else
+            soc_id=`cat /sys/devices/system/soc/soc0/id`
+        fi
+
+        if [ -f /sys/devices/soc0/hw_platform ]; then
+             hw_platform=`cat /sys/devices/soc0/hw_platform`
+        else
+             hw_platform=`cat /sys/devices/system/soc/soc0/hw_platform`
+        fi
+        case "$soc_id" in
+             "293" | "304" | "338" | "351" | "349" | "350" )
+                  case "$hw_platform" in
+                       "Surf")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                       "MTP")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                       "RCM")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                       "QRD")
+                                    setprop qemu.hw.mainkeys 0
+                                    ;;
+                  esac
+                  ;;
+       esac
         ;;
     "sdm710")
         if [ -f /sys/devices/soc0/soc_id ]; then
@@ -367,12 +396,6 @@ case "$target" in
         ;;
 esac
 
-# Remove recovery cache from persist
-rm -rf /mnt/vendor/persist/cache/recovery
-
-# Set shared touchpanel nodes ownership (these are proc_symlinks to the real sysfs nodes)
-chown -LR system.system /proc/touchpanel
-
 #
 # Make modem config folder and copy firmware config to that folder for RIL
 #
@@ -403,7 +426,12 @@ buildvariant=`getprop ro.build.type`
 case "$buildvariant" in
     "userdebug" | "eng")
         #set default loglevel to KERN_INFO
-        echo "6 6 1 7" > /proc/sys/kernel/printk
+        #if VENDOR_EDIT
+        #Canjie.Zheng@PSW.AD.OppoDebug.LogKit.1078692, 2017/11/20, Add for modified kernel log level
+        echo "1 6 1 7" > /proc/sys/kernel/printk
+        #else
+        #echo "6 6 1 7" > /proc/sys/kernel/printk
+        #endif
         ;;
     *)
         #set default loglevel to KERN_WARNING
