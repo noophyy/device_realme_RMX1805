@@ -13,7 +13,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 $(call inherit-product, device/realme/RMX1805/device.mk)
 
 # Inherit some common Aosp stuff
-$(call inherit-product, vendor/aosp/config/common.mk)
+$(call inherit-product, vendor/lineage/config/common.mk)
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
